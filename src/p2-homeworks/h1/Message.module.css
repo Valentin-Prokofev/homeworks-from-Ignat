@@ -1,0 +1,71 @@
+.user {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+
+    background-color: #f2ff74;
+}
+
+.user_avatar {
+    width: 50px;
+    height: 50px;
+
+    margin-top: 30px;
+    padding-left: 10px;
+
+    border-radius: 50%;
+}
+
+.user_date {
+    width: 100%;
+    margin: 5px 5px 5px 15px;
+    padding: 10px;
+    position: relative;
+
+    background-color: #562626;
+    border-radius: 5px;
+}
+
+.user_date::after {
+    content: "";
+    width: 0;
+    height: 0;
+
+    border-bottom: 10px solid #562626;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #562626;
+    border-top: 10px solid transparent;
+
+
+    position: absolute;
+    top: 73%;
+    left: -17px;
+}
+
+.user_name {
+    margin: 5px 0;
+
+    color: #61dafb;
+    line-height: 1.2;
+}
+
+.user_message {
+    margin: 0;
+    padding-bottom: 10px;
+
+    color: #fff;
+    line-height: 1;
+}
+
+.user_message_time {
+    margin: 0;
+    padding-left: 180px;
+
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+
+    color: #1e9147;
+}
+
+
