@@ -1,3 +1,11 @@
-.someClass {
+.flex {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.flex_button {
+    margin: 0 auto;
+    max-width: 300px;
 }

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {SetStateAction} from 'react'
+import style from "./Affairs.module.css";
 import Affair from './Affair'
-import {AffairType} from './HW2'
+import {AffairType, FilterType} from './HW2'
 
 type AffairsPropsType = { // need to fix any
-    data: any
-    setFilter: any
-    deleteAffairCallback: any
+    data: Array<AffairType>
+    setFilter: (filterType:FilterType)=>void
+    deleteAffairCallback: (_id: number)=>void
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -17,20 +18,14 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {} // need to fix
-    const setHigh = () => {}
-    const setMiddle = () => {}
-    const setLow = () => {}
-
     return (
-        <div>
-
+        <div className={style.flex_button}>
             {mappedAffairs}
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <button onClick={()=>props.setFilter("all")}>All</button>
+            <button onClick={()=>props.setFilter("high")}>High</button>
+            <button onClick={()=>props.setFilter("middle")}>Middle</button>
+            <button onClick={()=>props.setFilter("low")}>Low</button>
         </div>
     )
 }
