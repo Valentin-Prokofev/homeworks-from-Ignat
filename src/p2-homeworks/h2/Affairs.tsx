@@ -21,7 +21,6 @@ function Affairs(props: AffairsPropsType) {
     return (
         <div className={style.flex_button}>
             {mappedAffairs}
-
             <button onClick={()=>props.setFilter("all")}>All</button>
             <button onClick={()=>props.setFilter("high")}>High</button>
             <button onClick={()=>props.setFilter("middle")}>Middle</button>
