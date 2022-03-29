@@ -18,25 +18,37 @@ const GreetingContainer = (props: GreetingContainerPropsType) => {
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-            setName(e.currentTarget.value)
-         // need to fix
-    }
 
-    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter") {
-            addUser();
+        //  if(e.currentTarget.value.trim()!=='') {
+        //     setName(e.currentTarget.value)
+        //     setError('')
+        // }else setName("")
+
+        const trimName = e.currentTarget.value.trim()
+        console.log(trimName)
+        if (trimName && trimName !== "") {
+            setName(trimName)
+             setError("")
+        } else {
+            setName("")
+            setError("Name is require!")
         }
+        // need to fix
     }
 
     const addUser = () => {
-        setError("")
-        if(name !== "") {
+        if (name) {
             props.addUserCallback(name)
             alert(`Hello ${name} !`) // need to fix
             setName("")
-        }else {
-            alert("error")
-            setError("Error")
+            setError('')
+        } else {
+            setError("Name is require!")
+        }
+    }
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            addUser();
         }
     }
 

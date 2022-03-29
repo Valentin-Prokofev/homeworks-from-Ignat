@@ -13,7 +13,7 @@ type GreetingPropsType = {
 
 // презентационная компонента (для верстальщика)
 const Greeting = (props: GreetingPropsType) => {
-    const inputClass = props.error ? s.error : "" // need to fix with (?:)
+    const inputClass = props.error ? s.error : s.input_class // need to fix with (?:)
 
     return (
         <div className={s.someClass}>
@@ -21,10 +21,12 @@ const Greeting = (props: GreetingPropsType) => {
                 value={props.name}
                 onChange={props.setNameCallback}
                 onKeyPress={props.onKeyPressHandler}
-                className={inputClass}/>
-            <span>{props.error}</span>
+                className={inputClass}
+                onBlur={props.setNameCallback}
+            />
             <button onClick={props.addUser}>add</button>
             <span>{props.totalUsers}</span>
+            {props.error && <div className={s.title_error}>{props.error}</div>}
         </div>
     )
 }

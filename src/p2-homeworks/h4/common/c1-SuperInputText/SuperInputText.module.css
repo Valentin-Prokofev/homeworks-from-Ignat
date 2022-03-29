@@ -3,10 +3,21 @@
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    /*border: 3px solid lime;*/
+    /*background: red;*/
+
+    width: 300px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    color: #5985dc;
+    outline-color: #9f9f95;
 }
 
 .error {
+    font-weight: bold;
+    font-size: 20px;
     color: red;
 }

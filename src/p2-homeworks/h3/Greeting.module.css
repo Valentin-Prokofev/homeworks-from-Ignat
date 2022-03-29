@@ -3,5 +3,27 @@
 }
 
 .error {
-    border: 1px solid red;
+    width: 300px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 3px solid red;
+    background: #F6F6f6;
+    border-radius: 8px;
+    color: #5985dc;
+    outline-color: #9f9f95;
+}
+
+.title_error {
+    color: red;
+}
+
+.input_class {
+    width: 300px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    color: #5985dc;
+    outline-color: #9f9f95;
 }

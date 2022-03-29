@@ -17,7 +17,8 @@ function HW4() {
     }
 
     const [checked, setChecked] = useState<boolean>(false)
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
+    const testOnChange = (e: ChangeEvent<HTMLInputElement>) =>
+        setChecked(e.currentTarget.checked)
 
     return (
         <div>
@@ -30,6 +31,7 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
+                    // className={s.blue}
                     // spanClassName={s.testSpanError}
                 />
 
@@ -64,7 +66,10 @@ function HW4() {
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox
+                    checked={checked}
+                    onChangeCustome={testOnChange}
+                />
             </div>
 
             <hr/>
