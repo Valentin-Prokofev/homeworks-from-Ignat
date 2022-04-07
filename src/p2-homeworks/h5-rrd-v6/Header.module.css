@@ -11,3 +11,47 @@
 /*div:hover {*/
 /*    left: 0px;*/
 /*}*/
+
+.ul_navLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ul_navLink li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: blue;
+}
+
+.ul_navLink li a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+.ul_navLink li  {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.square_div {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    margin-left: 15px;
+}
+
+.square_div:hover {
+    background-color: yellow;
+}
+
+.right {
+    transform: translate(0);
+    transition: transform 0.2s linear;
+}
+
+.left {
+    transform: translate(-300px);
+    transition: transform 0.2s linear;
+}
+
