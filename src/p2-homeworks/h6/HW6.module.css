@@ -1,0 +1,26 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pencil {
+    position: relative;
+    display: block;
+    width: 180px;
+    text-align: center;
+    background-image: url('./img/free-icon-pencil-3094216.png');
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 10px;
+
+    color: red;
+    font-size: 25px;
+}
+
