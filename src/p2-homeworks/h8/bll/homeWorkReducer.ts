@@ -4,13 +4,20 @@ export const homeWorkReducer = (state: Array<UserType>, action: HomeWorkReducerT
     switch (action.type) {
         case 'SORT-BY-NAME': {
             // need to fix
-            let newState = [...state]
-            return newState.sort((a, b) => a.name < b.name ? -1 : 1)
+            let newState = [...state].sort((a, b) => {
+                if(a.name > b.name) return 1
+                else if(a.name === b.name) return 0
+                else  return -1
+            })
+            return newState
         }
         case 'SORT-BY-NAME-REVERS': {
-            // need to fix
-            let newState = [...state]
-            return newState.sort((a, b) => a.name < b.name ? 1 : -1)
+            let newState = [...state].sort((a, b) => {
+                if(a.name < b.name) return 1
+                else if(a.name === b.name) return 0
+                else  return -1
+            })
+            return newState
         }
         case 'CHECK-MAJORITY': {
             // need to fix
@@ -47,6 +54,10 @@ export const checkMajorityAC = () => {
         payload: 18
     } as const
 }
+
+
+
+
 
 
 
