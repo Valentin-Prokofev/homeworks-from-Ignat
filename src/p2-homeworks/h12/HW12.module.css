@@ -1,5 +1,8 @@
 .dark {
     background: dimgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dark-text {
@@ -8,16 +11,22 @@
 
 .red {
     background: lightcoral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .red-text {
-    color: aqua;
+    color: blue;
 }
 
 .some {
     background: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .some-text {
-    color: darkslateblue;
+    color: yellow;
 }

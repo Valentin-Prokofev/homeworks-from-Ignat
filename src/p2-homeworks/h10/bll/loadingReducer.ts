@@ -15,7 +15,7 @@ export const loadingReducer = (state: InitialStateType = initState, action: Acti
     }
 }
 
-export const loadingAC = (load: boolean): any => {
+export const loadingAC = (load: boolean): LoadingActionType => {
     return {
         type: "CHANGE-STATUS-LOADING",
         payload: {
@@ -24,4 +24,9 @@ export const loadingAC = (load: boolean): any => {
     } as const
 } // fix any
 
-type LoadingActionType = ReturnType<typeof loadingAC>
+type LoadingActionType = {
+    type: "CHANGE-STATUS-LOADING"
+    payload: {
+        load: boolean
+    }
+}
